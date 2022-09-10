@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CharacterDetailsComponent } from './pages/character-details/character-details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    CharacterDetailsComponent
+    CharacterDetailsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
