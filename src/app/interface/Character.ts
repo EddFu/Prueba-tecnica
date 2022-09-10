@@ -4,6 +4,15 @@ export interface Character {
   image: string,
   status: string,
   species: string,
-  // location: string,
-  // episode: string,
+  location: LastLocation,
+  episode: CharacterEpisodies[]
+}
+
+
+export interface LastLocation {
+  name: string,
+}
+
+export interface CharacterEpisodies {
+  episode: []
 }

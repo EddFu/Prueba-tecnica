@@ -3,12 +3,14 @@
   <div class="card-body">
     <h5 class="card-title"> {{character.name}} </h5>
     <hr>
-    <p class="text-muted">{{character.status}} </p>
+    <p class="text-muted">Status: {{character.status}} </p>
     <hr>
     <div class="row text-left">
-      <p class="text-muted">{{character.species }}</p>
+      <p class="text-muted">Specie: {{character.species }}</p>
+      <p class="text-muted">Last location: {{character.location }}</p>
+      <p class="text-muted">Number of episodes: {{character.episode }}</p>
     </div>
-    <a href="#" class="btn btn-primary">Ver mas datos</a>
-    <a href="#" class="btn btn-secondary">Agregar a favoritos</a>
+    <a href="#" class="btn btn-primary" routerLink="/Character-Details">More data</a>
+    <a href="#" class="btn btn-success float-end">Add to fav</a>
   </div>
 </div>

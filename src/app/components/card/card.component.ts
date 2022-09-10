@@ -10,5 +10,6 @@ export class CardComponent {
 
   @Input() character!: Character;
 
+
   constructor() { }
 }

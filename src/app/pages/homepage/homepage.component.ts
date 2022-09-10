@@ -15,6 +15,7 @@ export class HomepageComponent {
   characters: Character[] | undefined;
 
 
+
   constructor(
     public http: HttpClient,
   ) {
@@ -27,16 +28,19 @@ export class HomepageComponent {
       .subscribe((res) => {
         // console.table(res.results)
         // console.log(res.results)
-        this.characters = res.results.map(({id, name, image, status, species}: Character) => {
+        this.characters = res.results.map(({id, name, image, status, species,location, episode}: Character) => {
           return {
             id: id,
             name: name,
             image: image,
             status: status,
             species: species,
+            location: location.name,
+            episode: episode.length
           }
         });
       });
   }
+
 
 }
