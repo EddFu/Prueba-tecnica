@@ -1,0 +1,28 @@
+.card {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.text-muted {
+  font-size: 1.5rem;
+}
+
+.occupation{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn-primary {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.btn-secondary {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}

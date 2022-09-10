@@ -25,7 +25,7 @@ export class HomepageComponent {
    async getData() {
     await this.http.get<any>(this.apiUrl + '/character')
       .subscribe((res) => {
-        console.table(res.results)
+        // console.table(res.results)
         // console.log(res.results)
         this.characters = res.results.map(({id, name, image, status, species}: Character) => {
           return {

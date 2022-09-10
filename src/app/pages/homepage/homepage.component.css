@@ -1,0 +1,16 @@
+.titleHomePage {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.containerHomePage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 90%;
+  margin: 50px auto;
+}
+
