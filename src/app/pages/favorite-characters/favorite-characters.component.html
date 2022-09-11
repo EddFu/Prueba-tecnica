@@ -1,0 +1,5 @@
+<button class="btn btn-primary float-end" routerLink="**">Go back</button>
+<section class="containerFavoritesPage">
+    <app-card *ngFor="let character of favCharacters$ | async" [character] = "character"></app-card>
+</section>
+

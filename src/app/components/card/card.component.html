@@ -8,9 +8,9 @@
     <div class="row text-left">
       <p class="text-muted">Specie: {{character.species }}</p>
       <p class="text-muted">Last location: {{character.location }}</p>
-      <p class="text-muted">Number of episodes: {{character.episode }}</p>
+      <p class="text-muted">Last episode: {{ character.episode.toString().replace("https://rickandmortyapi.com/api/episode/", "") }}</p><a class="lastEpisode" href=></a>
     </div>
-    <a href="#" class="btn btn-primary" routerLink="/Character-Details">More data</a>
-    <a href="#" class="btn btn-success float-end">Add to fav</a>
+    <a class="btn btn-primary" [routerLink]= "['/Character-Details', character.id]">More data</a>
+    <button href="#" class="btn btn-success float-end" (click)="toggleFavorite()">Add to fav or delete</button>
   </div>
 </div>

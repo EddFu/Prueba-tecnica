@@ -5,7 +5,9 @@ export interface Character {
   status: string,
   species: string,
   location: LastLocation,
-  episode: CharacterEpisodies[]
+  episode: CharacterEpisodies[],
+  url: string
+  isFavorite: boolean
 }
 
 
@@ -15,4 +17,10 @@ export interface LastLocation {
 
 export interface CharacterEpisodies {
   episode: []
+}
+
+export interface Episodes {
+  id: number,
+  name: string,
+  characters: []
 }

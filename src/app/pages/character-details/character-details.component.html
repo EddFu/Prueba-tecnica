@@ -1,1 +1,19 @@
-<p>character-details works!</p>
+<!-- <div *ngIf="character$ | async as character" > -->
+  <div *ngIf="character$ | async as character"  class="card" style="width: 35rem;">
+    <img src="{{ character.image }}" class="card-img-top" alt=" {{ character.name }} ">
+    <div class="card-body">
+      <h5 class="card-title"> {{character.name}} </h5>
+      <hr>
+      <p class="text-muted">Status: {{character.status}} </p>
+      <hr>
+      <div class="row text-left">
+        <p class="text-muted">Specie: {{character.species }}</p>
+        <div *ngFor="let episode of character.episode">
+          <p>Episode {{ episode.toString().replace("https://rickandmortyapi.com/api/episode/", "") }}</p>
+        </div>
+      </div>
+    </div>
+    <button (click)="goBack">back</button>
+  </div>
+<!-- </div> -->
+

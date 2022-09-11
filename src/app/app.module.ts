@@ -7,18 +7,21 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CharacterDetailsComponent } from './pages/character-details/character-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
+import { FavoriteCharactersComponent } from './pages/favorite-characters/favorite-characters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     CharacterDetailsComponent,
-    CardComponent
+    CardComponent,
+    FavoriteCharactersComponent,
+    // CharacterDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
