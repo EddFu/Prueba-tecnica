@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CharacterDetailsComponent } from './pages/character-details/character-details.component';
 import { FavoriteCharactersComponent } from './pages/favorite-characters/favorite-characters.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { LocationComponent } from './pages/location/location.component';
 
 
 
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'Character-Details/:id',
     component: CharacterDetailsComponent
+  },
+  {
+    path: 'Character-Location/:url',
+    component: LocationComponent
   },
   {
     path: 'Favorites',

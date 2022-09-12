@@ -7,13 +7,19 @@ export interface Character {
   location: LastLocation,
   episode: CharacterEpisodies[],
   url: string
-  isFavorite: boolean
+  isFavorite: boolean,
 }
 
 
 export interface LastLocation {
+  id: number,
   name: string,
+  type: string,
+  dimension: string,
+  url: string,
+  residents: []
 }
+
 
 export interface CharacterEpisodies {
   episode: []

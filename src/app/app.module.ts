@@ -8,6 +8,7 @@ import { CharacterDetailsComponent } from './pages/character-details/character-d
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
 import { FavoriteCharactersComponent } from './pages/favorite-characters/favorite-characters.component';
+import { LocationComponent } from './pages/location/location.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { FavoriteCharactersComponent } from './pages/favorite-characters/favorit
     CharacterDetailsComponent,
     CardComponent,
     FavoriteCharactersComponent,
-    // CharacterDetailsComponent
+    LocationComponent
   ],
   imports: [
     BrowserModule,

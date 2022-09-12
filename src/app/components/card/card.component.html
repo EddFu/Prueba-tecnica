@@ -7,7 +7,7 @@
     <hr>
     <div class="row text-left">
       <p class="text-muted">Specie: {{character.species }}</p>
-      <p class="text-muted">Last location: {{character.location }}</p>
+      <a class="text-muted" [routerLink]= "['/Character-Location', character.location.url]">Last location: {{character.location.name }}</a>
       <p class="text-muted">Last episode: {{ character.episode.toString().replace("https://rickandmortyapi.com/api/episode/", "") }}</p><a class="lastEpisode" href=></a>
     </div>
     <a class="btn btn-primary" [routerLink]= "['/Character-Details', character.id]">More data</a>

@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { Character } from 'src/app/interface/Character';
+import { Character, LastLocation } from 'src/app/interface/Character';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, take } from 'rxjs';
 import { CharacterServiceService } from 'src/app/services/character-service.service';
@@ -17,10 +17,12 @@ export class CharacterDetailsComponent implements OnInit {
 
   character$:  Observable<Character> | undefined ;
 
+
   constructor(
     private route: ActivatedRoute,
     private characterSvc: CharacterServiceService,
   ) {
+
   }
 
 
@@ -39,3 +41,4 @@ goBack():void {
 }
 
 }
+

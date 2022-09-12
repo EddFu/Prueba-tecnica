@@ -1,0 +1,12 @@
+<div *ngIf="location$ | async as location"  class="card" style="width: 35rem;">
+  <div class="card-body">
+    <h2 class="card-title">{{location.name}}</h2>
+    <hr>
+    <p class="text-muted">Type: {{location.type}} </p>
+    <p class="text-muted">Dimension: {{location.dimension}} </p>
+    <p class="text-muted">Number of residents: {{location.residents.length}} </p>
+    <hr>
+    <button class="btn btn-primary" routerLink="**">Go back</button>
+  </div>
+</div>
+

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Character } from 'src/app/interface/Character';
+import { Character, LastLocation } from 'src/app/interface/Character';
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
@@ -25,6 +25,10 @@ export class CharacterServiceService {
     return this.http.get<Character>(`${this.apiUrl}character/${id}`)
   }
 
+  getLocation(url: string) {
+    return this.http.get<LastLocation>(url)
+  }
+
   getEpisodes(ids: string) {
     let episodes = this.http.get<Character>(`${this.apiUrl}/episode/${ids}`)
     console.log(episodes)
@@ -40,6 +44,12 @@ export class CharacterServiceService {
     dataError.message = error.statusText;
     dataError.friendlyMessage = 'An error occured retrienving data.';
     return throwError(dataError);
+  }
+
+  searchCharacters(query = '', page = 200):Observable<Character[] | TrackHttpError> {
+    const filter = `${this.apiUrl}/?name=${query}&page=${page}`;
+    return this.http.get<Character[]>(filter)
+    .pipe(catchError((err) => this.handleHttpError(err)));
   }
 }
 

@@ -16,8 +16,6 @@ export class CardComponent {
   @Input() character!: Character;
 
   characterId: string | null = null;
-  // charac: Character | null = null;
-
 
   constructor(
     private localStorageSvc: LocalStorageService,

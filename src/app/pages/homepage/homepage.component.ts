@@ -14,14 +14,17 @@ export class HomepageComponent{
 
   apiUrl = 'https://rickandmortyapi.com/api'
 
-  characters: Character[] | undefined;
+  characters!: Character[];
+  info!: Character[];
   episodes: Episodes[] | undefined;
   listOfEpisodes: [] = [];
   charactersSubject: any;
 
   constructor(
+
     public http: HttpClient,
     private localStorageSvc : LocalStorageService,
+
   ) {
     this.getCharacters();
    }
@@ -39,7 +42,7 @@ export class HomepageComponent{
             image: image,
             status: status,
             species: species,
-            location: location.name,
+            location: location,
             episode: episode[episode.length - 1],
             url: url,
           }
@@ -47,7 +50,7 @@ export class HomepageComponent{
       });
   }
 
-
+  //para el localstorage
   private parseCharactersData(characters: Character[]):void {
     const currentFavs = this.localStorageSvc.getFavCharacters();
     const newData = characters.map(character => {
