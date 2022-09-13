@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
 import { FavoriteCharactersComponent } from './pages/favorite-characters/favorite-characters.component';
 import { LocationComponent } from './pages/location/location.component';
+import { ListOfEpisodesComponent } from './pages/list-of-episodes/list-of-episodes.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LocationComponent } from './pages/location/location.component';
     CharacterDetailsComponent,
     CardComponent,
     FavoriteCharactersComponent,
-    LocationComponent
+    LocationComponent,
+    ListOfEpisodesComponent
   ],
   imports: [
     BrowserModule,

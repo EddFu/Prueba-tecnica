@@ -10,7 +10,7 @@ import { LocationComponent } from './pages/location/location.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomepageComponent
+    component: HomepageComponent,
   },
   {
     path: 'Character-Details/:id',
@@ -32,7 +32,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

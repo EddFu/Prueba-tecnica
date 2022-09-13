@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Character, LastLocation } from 'src/app/interface/Character';
+import { Character, LastLocation, Episodes } from 'src/app/interface/Character';
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
@@ -29,10 +29,10 @@ export class CharacterServiceService {
     return this.http.get<LastLocation>(url)
   }
 
-  getEpisodes(ids: string) {
-    let episodes = this.http.get<Character>(`${this.apiUrl}/episode/${ids}`)
-    console.log(episodes)
-    return episodes
+  getAllEpisodes(url: string) {
+    console.log(url)
+    return this.http.get<Episodes>(url)
+
   }
 
   private handleHttpError(

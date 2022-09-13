@@ -1,3 +1,8 @@
+export interface Characters {
+  info: Info,
+  characters: Character[]
+}
+
 export interface Character {
   id: number,
   name: string,
@@ -9,7 +14,6 @@ export interface Character {
   url: string
   isFavorite: boolean,
 }
-
 
 export interface LastLocation {
   id: number,
@@ -29,4 +33,12 @@ export interface Episodes {
   id: number,
   name: string,
   characters: []
+}
+
+
+export interface Info {
+  count: number,
+  pages: number,
+  next: string,
+  prev: string
 }

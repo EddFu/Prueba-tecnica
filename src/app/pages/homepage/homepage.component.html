@@ -1,8 +1,10 @@
 <h1 class="titleHomePage">RickAndMorty API</h1>
 <hr>
+<div class="d-grid gap-2 d-md-flex justify-content-md-center">
+</div>
 <button class="btn btn-primary float-end" routerLink="/Favorites">Favorites</button>
-<section class="containerHomePage">
-  <div *ngFor="let character of characters " class="tarjeta">
+<section class="containerHomePage" *ngIf="characters">
+  <div *ngFor="let character of characters.characters" class="tarjeta">
     <app-card [character] = "character" ></app-card>
   </div>
 </section>
