@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
@@ -9,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
 import { FavoriteCharactersComponent } from './pages/favorite-characters/favorite-characters.component';
 import { LocationComponent } from './pages/location/location.component';
-import { ListOfEpisodesComponent } from './pages/list-of-episodes/list-of-episodes.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +17,7 @@ import { ListOfEpisodesComponent } from './pages/list-of-episodes/list-of-episod
     CardComponent,
     FavoriteCharactersComponent,
     LocationComponent,
-    ListOfEpisodesComponent
+
   ],
   imports: [
     BrowserModule,

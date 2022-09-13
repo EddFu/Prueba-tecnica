@@ -1,7 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Character, Episodes } from 'src/app/interface/Character';
+import { Character } from 'src/app/interface/Character';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, take } from 'rxjs';
+import { Observable } from 'rxjs';
 import { CharacterServiceService } from 'src/app/services/character-service.service';
 
 
@@ -28,12 +28,12 @@ export class CharacterDetailsComponent implements OnInit {
 
 
   ngOnInit(): void {
-  this.route.params.pipe( take(1)).subscribe((params) => {
+
+  this.route.params.subscribe((params) => {
     const id = params['id'];
     this.character$ = this.characterSvc.getDetails(id)
   });
 }
-
 
 }
 

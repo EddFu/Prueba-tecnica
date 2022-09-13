@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { Character, Characters, Info } from 'src/app/interface/Character';
 import { HttpClient} from '@angular/common/http';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
-import { ActivatedRoute } from '@angular/router';
-import { take } from 'rxjs';
 
 
 
@@ -21,7 +19,6 @@ export class HomepageComponent{
   charactersSubject: any;
 
   constructor(
-    private route: ActivatedRoute,
     public http: HttpClient,
     private localStorageSvc : LocalStorageService,
 
@@ -29,7 +26,7 @@ export class HomepageComponent{
     this.getCharacters();
    }
 
-   //obtener personajes
+   //obtener todos personajes
    async getCharacters() {
     await this.http.get<any>(this.apiUrl)
       .subscribe((res) => {

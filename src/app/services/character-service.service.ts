@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Character, LastLocation, Episodes } from 'src/app/interface/Character';
+import { Character, LastLocation} from 'src/app/interface/Character';
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
@@ -16,6 +16,8 @@ export class CharacterServiceService {
 
   apiUrl = 'https://rickandmortyapi.com/api/'
 
+  character!: Character;
+
   constructor(
     public http: HttpClient,
   ) { }
@@ -29,27 +31,14 @@ export class CharacterServiceService {
     return this.http.get<LastLocation>(url)
   }
 
-  getAllEpisodes(url: string) {
-    console.log(url)
-    return this.http.get<Episodes>(url)
-
-  }
-
   private handleHttpError(
     error:HttpErrorResponse
   ):Observable<TrackHttpError>{
-
     let dataError = new TrackHttpError();
     dataError.errorNumber = error.status;
     dataError.message = error.statusText;
     dataError.friendlyMessage = 'An error occured retrienving data.';
     return throwError(dataError);
-  }
-
-  searchCharacters(query = '', page = 200):Observable<Character[] | TrackHttpError> {
-    const filter = `${this.apiUrl}/?name=${query}&page=${page}`;
-    return this.http.get<Character[]>(filter)
-    .pipe(catchError((err) => this.handleHttpError(err)));
   }
 }
 

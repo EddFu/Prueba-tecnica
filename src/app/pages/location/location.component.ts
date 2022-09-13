@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, take } from 'rxjs';
 import { CharacterServiceService } from 'src/app/services/character-service.service';
-import { Character, LastLocation } from 'src/app/interface/Character';
+import { LastLocation } from 'src/app/interface/Character';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

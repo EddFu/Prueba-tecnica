@@ -26,7 +26,7 @@ export interface LastLocation {
 
 
 export interface CharacterEpisodies {
-  episode: []
+  episode: string
 }
 
 export interface Episodes {

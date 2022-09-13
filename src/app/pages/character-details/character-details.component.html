@@ -13,6 +13,7 @@
       </div>
         <div  class="episodes-card">
           <div *ngFor="let episode of character.episode">
+            <p class="episodes-name">List of episodes</p>
             <p class="episodes-name">Episode {{ episode.toString().replace("https://rickandmortyapi.com/api/episode/", "") }}</p>
           </div>
         </div>
